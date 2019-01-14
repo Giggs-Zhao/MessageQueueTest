@@ -15,7 +15,7 @@ public class RabbitConfig {
      */
     private final static String STRING = "TEST";
 
-    private final static String FIRSTFANOUT = "FIRSTFANOUT";
+    private final static String FIRSTFANOUT = "FirstFanout";
 
 
 

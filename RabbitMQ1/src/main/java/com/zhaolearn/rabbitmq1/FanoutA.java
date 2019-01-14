@@ -6,9 +6,11 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 @Component
-@RabbitListener(queues = "fanout.c")
-public class ListenerC {
+@RabbitListener(queues = "fanout.a")
+public class FanoutA {
 
     @Autowired
     private AmqpTemplate rabbitmqTemplate;
@@ -19,6 +21,6 @@ public class ListenerC {
      */
     @RabbitHandler
     public void recieved(String msg) {
-        System.out.println("[fanout.c] recieved message:" + msg);
+        System.out.println("[fanout.a] recieved message:" + msg);
     }
 }

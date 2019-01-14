@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(queues = "fanout.b")
-public class ListenerB {
+@RabbitListener(queues = "fanout.c")
+public class FanoutC {
 
     @Autowired
     private AmqpTemplate rabbitmqTemplate;
@@ -19,6 +19,6 @@ public class ListenerB {
      */
     @RabbitHandler
     public void recieved(String msg) {
-        System.out.println("[fanout.b] recieved message:" + msg);
+        System.out.println("[fanout.c] recieved message:" + msg);
     }
 }

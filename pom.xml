@@ -10,7 +10,7 @@
     <modules>
         <module>RabbitMQ</module>
         <module>RabbitMQ1</module>
-
+        <module>RabbitMQ2</module>
     </modules>
 
 </project>

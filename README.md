@@ -22,7 +22,8 @@ MessageQueue父模块
     最简单版本的Rabbit使用
 2. RabbitMQ1
     fanout广播模式，只要跟它绑定的队列都会通知并且接受到消息，基于上边第1点
-  
+3. RabbitMQ2
+    topic，topic队列跟交换器，消费者只会接收指定的消息，基于上边第2点
 
 
 
