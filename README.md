@@ -24,8 +24,8 @@ MessageQueue父模块
     fanout广播模式，只要跟它绑定的队列都会通知并且接受到消息，基于上边第1点
 3. RabbitMQ2
     topic，topic队列跟交换器，消费者只会接收指定的消息，基于上边第2点
-
-
+4. RabbitMQ3
+    Direct模式，相对topic要严格，绑定时给入key，只让符合key的接收者接收，给予第1点
 
 #### 参与贡献
 
