@@ -36,15 +36,8 @@ public class RabbitConfig {
 
 
 
-    //以下是TTL
-    @Bean
-    DirectExchange messageTtlDirect() {
-        return (DirectExchange) ExchangeBuilder
-                .directExchange(QueueEnum.MESSAGE_TTL_QUEUE.getExchange())
-                .durable(true)
-                .build();
-    }
 
+    //以下是TTL
     @Bean
     Queue messageTtlQueue() {
         return QueueBuilder
@@ -53,6 +46,14 @@ public class RabbitConfig {
                 .withArgument("x-dead-letter-exchange", QueueEnum.MESSAGE_QUEUE.getExchange())
                 // 配置到期后转发的路由键
                 .withArgument("x-dead-letter-routing-key", QueueEnum.MESSAGE_QUEUE.getRouteKey())
+                .build();
+    }
+
+    @Bean
+    DirectExchange messageTtlDirect() {
+        return (DirectExchange) ExchangeBuilder
+                .directExchange(QueueEnum.MESSAGE_TTL_QUEUE.getExchange())
+                .durable(true)
                 .build();
     }
     @Bean
