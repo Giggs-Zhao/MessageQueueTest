@@ -21,7 +21,6 @@ public class TTLEntity {
      */
     @RabbitListener(queues ="message.center.create")
     public void recieved(String msg) {
- //       System.out.println("消费内容：{"+ msg+"}");
         LOGGER.info("---------消费内容：{}", msg);
     }
 }

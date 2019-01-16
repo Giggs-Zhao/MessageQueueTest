@@ -6,7 +6,7 @@ import org.springframework.amqp.core.CustomExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+import com.google.common.collect.Maps;
 import java.util.*;
 
 @Configuration
@@ -18,7 +18,7 @@ public class RabbitConfig {
 
     @Bean
     public CustomExchange messageDirect() {
-        Map<String, Object> args = new HashMap<String, Object>();
+        Map<String, Object> args = Maps.newHashMap();
         args.put("x-delayed-type", "direct");
         return new CustomExchange(QueueEnum.MESSAGE_QUEUE.getExchange(), "x-delayed-message", true, false, args);
     }

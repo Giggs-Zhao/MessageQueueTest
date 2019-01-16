@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitConfig {
-    //以下是实时
     @Bean
     DirectExchange messageDirect() {
         return (DirectExchange) ExchangeBuilder
@@ -37,7 +36,6 @@ public class RabbitConfig {
 
 
 
-    //以下是TTL
     @Bean
     Queue messageTtlQueue() {
         return QueueBuilder
