@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zhaolearn</groupId>
-    <artifactId>rabbitmq-2</artifactId>
+    <artifactId>rabbitmq2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>RabbitMQ2</name>
     <description>Demo project for Spring Boot</description>

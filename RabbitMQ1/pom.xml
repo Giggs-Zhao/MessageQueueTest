@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zhaolearn</groupId>
-    <artifactId>rabbitmq-1</artifactId>
+    <artifactId>rabbitmq1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>RabbitMQ1</name>
     <description>RabbitMQ1</description>

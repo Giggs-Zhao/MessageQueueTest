@@ -12,6 +12,7 @@
         <module>RabbitMQ1</module>
         <module>RabbitMQ2</module>
         <module>RabbitMQ3</module>
+        <module>RabbitMQ4</module>
     </modules>
 
 </project>
