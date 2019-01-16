@@ -26,6 +26,8 @@ MessageQueue父模块
     topic，topic队列跟交换器，消费者只会接收指定的消息，基于上边第2点
 4. RabbitMQ3
     Direct模式，相对topic要严格，绑定时给入key，只让符合key的接收者接收，给予第1点
+5. RabbitMQ4
+    Delay模式，延期消息队列
 
 #### 参与贡献
 
