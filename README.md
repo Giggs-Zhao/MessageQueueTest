@@ -25,9 +25,12 @@ MessageQueue父模块
 3. RabbitMQ2
     topic，topic队列跟交换器，消费者只会接收指定的消息，基于上边第2点
 4. RabbitMQ3
-    Direct模式，相对topic要严格，绑定时给入key，只让符合key的接收者接收，给予第1点
+    Direct模式，相对topic要严格，绑定时给入key，只让符合key的接收者接收，基于第1点
 5. RabbitMQ4
-    Delay模式，延期消息队列
+    Delay模式，延期消息队列，将队列放入Enum中，另外在MQ3的POM引入MQ4依赖，并清空MQ内的队列（连接15762接口），先启动MQ4测试方法，发送消息，然后启动MQ3，启动马上读取，或者先启动MQ3，再启动MQ4测试方法（要快，不然MQ3报错），10秒后可以看到新的消息
+    
+    
+    基于第1点
 
 #### 参与贡献
 
