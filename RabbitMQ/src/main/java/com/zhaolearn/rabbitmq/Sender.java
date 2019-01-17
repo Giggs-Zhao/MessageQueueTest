@@ -16,7 +16,7 @@ public class Sender {
 
     public void send() {
         Date date = new Date();
-        String dateString = new SimpleDateFormat("yyyy-mm-DD hh:MM:ss").format(date);
+        String dateString = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
         System.out.println("Sender name is TEST: " + dateString);
         this.rabbitTemplate.convertAndSend("TEST", dateString);
     }
