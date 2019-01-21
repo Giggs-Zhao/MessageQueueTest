@@ -17,11 +17,7 @@ public class Sender {
     @Autowired
     private JmsMessagingTemplate jmsMessagingTemplate;
     public void send(String destName, Object message){
-        JmsTemplate jmsTemplate = jmsMessagingTemplate.getJmsTemplate();
-        //开启订阅模式
-        jmsTemplate.setPubSubDomain(true);
-        Destination destination = new ActiveMQTopic(destName);
         System.out.println("发布消息：" + message);
-        jmsMessagingTemplate.convertAndSend(destination, message);
+        jmsMessagingTemplate.convertAndSend(destName, message);
     }
 }
