@@ -12,11 +12,18 @@ public class Activemq1ApplicationTests {
 
     @Autowired
     private Sender sender;
-
+    @Autowired
+    private TopicSender topicSender;
     @Test
     public void testLazy() {
-        sender.send("testactive", "发送消息啦啦啦啦啦啦");
+        topicSender.send("topic.name", "发送Topic消息啦啦啦啦啦啦");
     }
 
+    @Test
+    public void testLazy1() {
+        for (int i = 0; i < 10; i++) {
+            sender.send("testactive", "发送Topic消息啦啦啦啦啦啦");
+        }
+    }
 }
 

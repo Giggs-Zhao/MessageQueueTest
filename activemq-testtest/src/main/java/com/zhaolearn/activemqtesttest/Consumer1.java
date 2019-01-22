@@ -1,15 +1,12 @@
 package com.zhaolearn.activemqtesttest;
 
-import org.apache.activemq.command.ActiveMQObjectMessage;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 
-import javax.jms.JMSException;
-
 @Service
-public class Consumer {
+public class Consumer1 {
     @JmsListener(destination = "testactive")
     public void receiveQueue(String text) {
-        System.out.println("Consumer接收到："+text);
+        System.out.println("Consumer1接收到："+text);
     }
 }
