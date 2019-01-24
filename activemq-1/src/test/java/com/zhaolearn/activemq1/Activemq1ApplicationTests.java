@@ -24,7 +24,7 @@ public class Activemq1ApplicationTests {
     @Test
     public void testLazy1() {
         for (int i = 0; i < 10; i++) {
-            sender.send("testactive", "发送Topic消息啦啦啦啦啦啦");
+            sender.send("testactive", "发送Queue消息啦啦啦啦啦啦");
         }
     }
     @Test

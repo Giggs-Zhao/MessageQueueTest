@@ -21,7 +21,12 @@ public class TopicSender {
 
     public void send(String destName, Object message){
         System.out.println("发布消息：" + message);
+        JmsTemplate jmsTemplate = jmsMessagingTemplate.getJmsTemplate();
+        //开启订阅模式
+        jmsTemplate.setPubSubDomain(true);
+        Destination destination = new ActiveMQTopic(destName);
         jmsMessagingTemplate.convertAndSend(destName, message);
+
     }
     public void delaySend(String destName, Object message, Long time){
         JmsTemplate jmsTemplate = jmsMessagingTemplate.getJmsTemplate();
