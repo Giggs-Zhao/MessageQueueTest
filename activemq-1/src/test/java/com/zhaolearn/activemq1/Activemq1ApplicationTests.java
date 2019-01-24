@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.jms.JMSException;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class Activemq1ApplicationTests {
@@ -25,5 +27,10 @@ public class Activemq1ApplicationTests {
             sender.send("testactive", "发送Topic消息啦啦啦啦啦啦");
         }
     }
+    @Test
+    public void testDelay(){
+        topicSender.delaySend("topic.name", "发送Topic消息啦啦啦啦啦啦",3000L);
+    }
+
 }
 
