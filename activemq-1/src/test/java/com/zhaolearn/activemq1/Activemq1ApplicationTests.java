@@ -16,19 +16,29 @@ public class Activemq1ApplicationTests {
     private Sender sender;
     @Autowired
     private TopicSender topicSender;
-    @Test
-    public void testLazy() {
-        topicSender.send("topic.name", "发送Topic消息啦啦啦啦啦啦");
-    }
+
 
     @Test
-    public void testLazy1() {
+    public void tesQueue() {
         for (int i = 0; i < 10; i++) {
             sender.send("testactive", "发送Queue消息啦啦啦啦啦啦");
         }
     }
+
     @Test
-    public void testDelay(){
+    public void testQueueDelay() {
+        for (int i = 0; i < 10; i++) {
+            sender.delaySend("testactive", "延时发送Queue消息啦啦啦啦啦啦",300000L);
+        }
+    }
+
+    @Test
+    public void testTopic() {
+        topicSender.send("topic.name", "发送Topic消息啦啦啦啦啦啦");
+    }
+
+    @Test
+    public void testTopicDelay(){
         topicSender.delaySend("topic.name", "发送Topic消息啦啦啦啦啦啦",3000L);
     }
 

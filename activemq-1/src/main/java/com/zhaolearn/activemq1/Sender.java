@@ -20,4 +20,10 @@ public class Sender {
         System.out.println("发布消息：" + message);
         jmsMessagingTemplate.convertAndSend(destName, message);
     }
+
+    public void delaySend(String destName, Object message, Long time) {
+
+        jmsMessagingTemplate.getJmsTemplate().convertAndSend(destName, message, new ScheduleMessagePostProcessor(time));
+        LOGGER.info("发送" + message);
+    }
 }
