@@ -22,7 +22,6 @@ public class Sender {
     }
 
     public void delaySend(String destName, Object message, Long time) {
-
         jmsMessagingTemplate.getJmsTemplate().convertAndSend(destName, message, new ScheduleMessagePostProcessor(time));
         LOGGER.info("发送" + message);
     }
