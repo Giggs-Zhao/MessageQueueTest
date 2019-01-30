@@ -14,6 +14,8 @@
         <module>RabbitMQ3</module>
         <module>RabbitMQ4</module>
         <module>RabbitMQ5</module>
+        <module>activemq-1</module>
+        <module>activemq-testtest</module>
     </modules>
 
 </project>

@@ -30,7 +30,10 @@ MessageQueue父模块
     Delay模式，延期消息队列(TTL+DLX)，将队列放入Enum中，另外在MQ3的POM引入MQ4依赖，并清空MQ内的队列（连接15762接口），先启动MQ4测试方法，发送消息，然后启动MQ3，启动马上读取，或者先启动MQ3，再启动MQ4测试方法（要快，不然MQ3报错），10秒后可以看到新的消息
 6. RabbitMQ5
     Delay模式，延期消息队列(插件方式),社区插件：http://www.rabbitmq.com/community-plugins.html的rabbitmq_delayed_message_exchange插件，否则启动出错，基于第1点
-
+7.  activemq-1
+    所有的ActiveMQ都在里面集成
+8.  avtivemq-testtest
+    ActiveMQ的消费者模块
 #### 参与贡献
 
 1. RyzeZhao
