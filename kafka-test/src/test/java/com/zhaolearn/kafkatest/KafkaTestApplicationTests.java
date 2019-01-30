@@ -14,7 +14,7 @@ private Sender sender;
     @Test
     public void contextLoads() {
         for (int i = 0; i < 3; i++) {
-            sender.send("test_topic","key"+i,"测试数据");
+            sender.send("test_topic1","key"+i,"测试数据");
         }
     }
 

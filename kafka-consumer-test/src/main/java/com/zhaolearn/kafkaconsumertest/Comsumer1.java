@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Comsumer1 {
     private final static Logger LOGGER = LoggerFactory.getLogger(Comsumer1.class);
-    @KafkaListener(topics = {"test_topic2"},groupId = "test")
+    @KafkaListener(topics = {"test_topic1"},groupId = "test")
     public void listen (ConsumerRecord<?, ?> record) {
         LOGGER.info(record.toString());
         LOGGER.info("【消费{}主题, 第{}分区, 数据:{}, 偏移量:{}】", record.topic(), record.partition(), record.value(), record.offset());

@@ -14,7 +14,7 @@ public class Sender {
 
     public void send(String name,String key, String message) {
         LOGGER.info("kafka的消息={}", message);
-        kafkaTemplate.send(name,message);
+        kafkaTemplate.send(name,key,message);
     }
 
 
