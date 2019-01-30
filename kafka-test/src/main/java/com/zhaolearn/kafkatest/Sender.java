@@ -12,9 +12,9 @@ public class Sender {
     @Autowired
     private KafkaTemplate kafkaTemplate;
 
-    public void send(String name, String message) {
+    public void send(String name,String key, String message) {
         LOGGER.info("kafka的消息={}", message);
-        kafkaTemplate.send(name, message);
+        kafkaTemplate.send(name,message);
     }
 
 

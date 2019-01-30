@@ -13,7 +13,9 @@ public class KafkaTestApplicationTests {
 private Sender sender;
     @Test
     public void contextLoads() {
-        sender.send("test_topic","测试数据");
+        for (int i = 0; i < 3; i++) {
+            sender.send("test_topic","key"+i,"测试数据");
+        }
     }
 
 }
